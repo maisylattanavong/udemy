@@ -80,7 +80,7 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
                             <FormItem>
                                 <FormLabel>Category</FormLabel>
                                 <FormControl>
-                                    <Combobox options={categories} />
+                                    <Combobox options={categories} {...field}/>
                                 </FormControl>
 
                                 <FormMessage />
