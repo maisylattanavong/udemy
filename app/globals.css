@@ -32,3 +32,12 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.cl-formButtonPrimary {
+  color:black;
+  background-color: #fdab04;
+}
+.cl-formButtonPrimary:hover {
+  background-color: rgba(253,171,4);
+}
