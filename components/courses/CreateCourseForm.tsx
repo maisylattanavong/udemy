@@ -72,15 +72,29 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
                                 <FormMessage />
                             </FormItem>
                         )}
-                    />                    
+                    />
+                    <FormField
+                        control={form.control}
+                        name="subCategoryId"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col">
+                                <FormLabel>Subcategory</FormLabel>
+                                <FormControl>
+                                    <Combobox options={categories.find((category)=>category.value=== form.watch("categoryId"))?.subCategory || []} {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
                     <FormField
                         control={form.control}
                         name="categoryId"
                         render={({ field }) => (
-                            <FormItem>
+                            <FormItem className="flex flex-col">
                                 <FormLabel>Category</FormLabel>
                                 <FormControl>
-                                    <Combobox options={categories} {...field}/>
+                                    <Combobox options={categories} {...field} />
                                 </FormControl>
 
                                 <FormMessage />
